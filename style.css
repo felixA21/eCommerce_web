@@ -2,29 +2,97 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+img {
+  width: 100%;
 }
 
 .navbar {
   display: flex;
+  position: relative;
+  justify-content: space-between;
   align-items: center;
-  padding: 10px;
+  background-color: #333;
+  color: white;
 }
 
-nav {
-  flex: 1;
-  text-align: right;
+.navbar-links {
+  height: 100%;
 }
 
-nav ul {
-  display: inline-block;
-  list-style-type: none;
+.navbar-links ul {
+  display: flex;
+  margin: 0;
+  padding: 0;
 }
 
-nav ul li {
-  display: inline-block;
-  margin-right: 20px;
+.navbar-links li {
+  list-style: none;
 }
 
+.navbar-links li a {
+  display: block;
+  text-decoration: none;
+  color: white;
+  padding: 1rem;
+}
+
+.navbar-links li:hover {
+  background-color: #555;
+}
+
+.toggle-button {
+  position: absolute;
+  top: 0.75rem;
+  right: 1rem;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 21px;
+}
+
+.toggle-button .bar {
+  height: 3px;
+  width: 100%;
+  background-color: white;
+  border-radius: 10px;
+}
+
+@media (max-width: 800px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .toggle-button {
+    display: flex;
+  }
+
+  .navbar-links {
+    display: none;
+    width: 100%;
+  }
+
+  .navbar-links ul {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .navbar-links ul li {
+    text-align: center;
+  }
+
+  .navbar-links ul li a {
+    padding: 0.5rem 1rem;
+  }
+
+  .navbar-links.active {
+    display: flex;
+  }
+}
 a {
   text-decoration: none;
   color: #555;
@@ -55,7 +123,7 @@ p {
 
 .col-2 img {
   max-width: 100%;
-  padding: 50px 0;
+  padding: 50px 50px;
 }
 
 .col-2 h1 {
@@ -65,5 +133,44 @@ p {
 }
 
 .header {
-  background: radial-gradient(#fff, #ffd6d6);
+  background: radial-gradient(#9a9191, #81a0a1);
+}
+
+.btn {
+  margin: 20px 0;
+  padding: 10px 50px;
+  border-radius: 30px;
+  display: inline-block;
+  background: firebrick;
+  color: white;
+  transition: background 0.3s;
+}
+.btn:hover {
+  background: radial-gradient(#6f3232, #5e2929);
+}
+
+.section-title {
+  font-size: 1.5rem;
+  font-weight: 600rem;
+  text-align: center;
+  padding-bottom: 50px;
+}
+
+.shop {
+  margin-top: 2rem;
+}
+
+.shop-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, auto));
+  gap: 1.5rem;
+}
+
+.product-box {
+  position: relative;
+}
+.product-box:hover {
+  padding: 10px;
+  border: 1px solid;
+  transition: 0.4s;
 }

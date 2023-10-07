@@ -5,33 +5,99 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Brand | Ecommerce Website</title>
     <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
   </head>
   <body>
     <div class="header">
       <div class="container">
         <div class="navbar">
           <div class="logo"><img src="" alt="logo" width="125px" /></div>
-          <nav>
-            <ul>
-              <li><a href="" #>Home</a></li>
-              <li><a href="" #>Product</a></li>
-              <li><a href="" #>About</a></li>
-              <li><a href="" #>Contact</a></li>
-            </ul>
+          <nav class="navbar">
+            <a href="#" class="toggle-button">
+              <span class="bar"></span>
+              <span class="bar"></span>
+              <span class="bar"></span>
+            </a>
+            <div class="navbar-links">
+              <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+                <li>
+                  <a href="#"
+                    ><img src="img/cart.png" alt="" width="30px" height="30px"
+                  /></a>
+                </li>
+              </ul>
+            </div>
           </nav>
-          <img src="img/cart.png" alt="" width="30px" height="30px" />
         </div>
         <div class="row">
           <div class="col-2">
             <h1>Brand new fit! <br />Get Yours Today</h1>
-            <p>lorem ipsum sidul gahim minatu touika sukh kart</p>
+            <p>
+              lorem ipsum sidul gahim minatu touika sukh kart
+              <br />
+              <a href="#" class="btn">View Products</a>
+            </p>
           </div>
 
           <div class="col-2">
-            <img src="#" alt="header-img" />
+            <img src="img/header.webp" alt="header-img" />
           </div>
         </div>
       </div>
     </div>
+
+    <!-----shop--------->
+
+    <section class="shop container">
+      <h2 class="section-title">Products</h2>
+      <!------items------>
+      <div class="shop-content">
+        <!---box1-->
+        <div class="product-box">
+          <img src="img/betterIMG/product1.jpg" class="product-img" />
+          <h2 class="product-title">Falcon Black</h2>
+          <span class="price">$40</span>
+          <button style="font-size: 24px">
+            Add to <i class="fa fa-shopping-cart"></i>
+          </button>
+        </div>
+
+        <!---box2-->
+        <div class="product-box">
+          <img src="img/betterIMG/product2.jpg" class="product-img" />
+          <h2 class="product-title">Wireless Earbuds</h2>
+          <span class="price">$120</span>
+          <button style="font-size: 24px">
+            Add to <i class="fa fa-shopping-cart"></i>
+          </button>
+        </div>
+
+        <!---box1-->
+        <div class="product-box">
+          <img src="img/betterIMG/product3.jpg" class="product-img" />
+          <h2 class="product-title">Parka</h2>
+          <span class="price">$320</span>
+          <button style="font-size: 24px">
+            Add to <i class="fa fa-shopping-cart"></i>
+          </button>
+        </div>
+
+        <!---box1-->
+        <div class="product-box">
+          <img src="img/betterIMG/product4.jpg" class="product-img" />
+          <h2 class="product-title">Water Bottle</h2>
+          <span class="price">$20</span>
+          <button style="font-size: 24px">
+            Add to <i class="fa fa-shopping-cart"></i>
+          </button>
+        </div>
+      </div>
+    </section>
   </body>
 </html>
