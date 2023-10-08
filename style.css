@@ -5,6 +5,11 @@
   scroll-behavior: smooth;
 }
 
+.container {
+  max-width: 1000px;
+  margin: auto;
+}
+
 img {
   width: 100%;
 }
@@ -22,74 +27,73 @@ img {
   color: white;
 }
 
-.navbar-links {
+.navbar-lists {
   height: 100%;
 }
 
-.navbar-links ul {
+.navbar-lists ul {
   display: flex;
   margin: 0;
   padding: 0;
 }
 
-.navbar-links li {
+.navbar-lists li {
   list-style: none;
 }
 
-.navbar-links li a {
+.navbar-lists li a {
   display: block;
   text-decoration: none;
   color: white;
   padding: 1rem;
 }
 
-.navbar-links li:hover {
+.navbar-lists li:hover {
   background-color: #555;
 }
 
 .toggle-button {
-  position: absolute;
+  height: 20px;
+  width: 30px;
   top: 0.75rem;
   right: 1rem;
   display: none;
+  position: absolute;
   flex-direction: column;
   justify-content: space-between;
-  width: 30px;
-  height: 21px;
 }
 
 .toggle-button .bar {
-  height: 3px;
+  height: 2px;
   width: 100%;
   background-color: white;
-  border-radius: 10px;
 }
 
 @media (max-width: 800px) {
   .navbar {
-    flex-direction: column;
     align-items: flex-start;
+    flex-direction: column;
   }
 
   .toggle-button {
     display: flex;
   }
 
-  .navbar-links {
+  .navbar-lists {
     display: none;
     width: 100%;
   }
 
-  .navbar-links ul {
+  .navbar-lists ul {
     width: 100%;
     flex-direction: column;
   }
 
-  .navbar-links ul li {
+  .navbar-lists ul li {
     text-align: center;
   }
 
-  .navbar-links ul li a {
+  .navbar-lists ul li a {
     padding: 0.5rem 1rem;
   }
 
@@ -97,20 +101,14 @@ img {
     display: flex;
   }
 }
+
 a {
   text-decoration: none;
-  color: #555;
+  color: #a11212;
 }
 
 p {
-  color: #555;
-}
-
-.container {
-  max-width: 1500px;
-  margin: auto;
-  padding-left: 8px;
-  padding-right: 8px;
+  color: #171111;
 }
 
 .row {
@@ -153,28 +151,31 @@ p {
   background: radial-gradient(#6f3232, #5e2929);
 }
 
+/* product styling */
+
 .section-title {
-  font-size: 1.5rem;
-  font-weight: 600rem;
   text-align: center;
+  font-size: 2.5rem;
+  font-weight: 400rem;
   padding-bottom: 50px;
 }
 
-.shop {
+.feature {
   margin-top: 2rem;
+  margin-bottom: 30px;
 }
 
-.shop-content {
+.feature-content {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, auto));
-  gap: 1.5rem;
+  gap: 2.5rem;
 }
 
 .product-box {
   position: relative;
 }
 .product-box:hover {
-  padding: 10px;
-  border: 1px solid;
+  padding: 7px;
+  border: 2.5px solid;
   transition: 0.4s;
 }
